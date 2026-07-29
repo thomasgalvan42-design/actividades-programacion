@@ -93,7 +93,7 @@ public class Main {
         int capacidad = sc.nextInt();
         sc.nextLine();
 
-        Inventario inventario = new Inventario(capacidad);
+        inventario inventario = new inventario(capacidad);
 
         int opcion;
 
@@ -198,10 +198,10 @@ public class Main {
 
                     System.out.println("\nInventario:");
 
-                    for (String item : inventario.consultarInventario()) {
-
-                        if (item != null) {
-                            System.out.println("- " + item);
+                    String[] items = inventario.consultarInventario();
+                    for (int i = 0; i < items.length; i++) {
+                        if (items[i] != null) {
+                            System.out.println("- " + items[i]);
                         }
                     }
 
